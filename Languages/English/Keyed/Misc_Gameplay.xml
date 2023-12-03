@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<SM_InsertMeatDesc>Meat to insert</SM_InsertMeatDesc>
+	<SM_StartInsertionMeat>Insert meat</SM_StartInsertionMeat>
+	<SM_StartInsertionMeatDesc>Bring meat to the meat rack to start the salting process.</SM_StartInsertionMeatDesc>
+	<SM_CancelBringingMeat>Cancel bringing meat</SM_CancelBringingMeat>
+	<SM_CancelBringingMeatDesc>Cancel bringing meat to the meat rack.</SM_CancelBringingMeatDesc>
+
+	<SM_InsertFishDesc>Fish to insert</SM_InsertFishDesc>
+	<SM_StartInsertionFish>Insert fish</SM_StartInsertionFish>
+	<SM_StartInsertionFishDesc>Bring fish to the drying rack to start the drying process.</SM_StartInsertionFishDesc>
+	<SM_CancelBringingFish>Cancel bringing fish</SM_CancelBringingFish>
+	<SM_CancelBringingFishDesc>Cancel bringing fish to the drying rack.</SM_CancelBringingFishDesc>
+
+	<SM_InsertSausageDesc>Sausages to insert</SM_InsertSausageDesc>
+	<SM_StartInsertionSausage>Insert sausage</SM_StartInsertionSausage>
+	<SM_StartInsertionSausageDesc>Bring raw sausages to the sausage to let them age.</SM_StartInsertionSausageDesc>
+	<SM_CancelBringingSausage>Cancel bringing sausage</SM_CancelBringingSausage>
+	<SM_CancelBringingSausageDesc>Cancel bringing sausages to the sausage post.</SM_CancelBringingSausageDesc>
+	<SM_RemoveSausage>Remove sausages</SM_RemoveSausage>
+	<SM_RemoveSausageDesc>Remove sausages from the sausage post.</SM_RemoveSausageDesc>
+
+</LanguageData>

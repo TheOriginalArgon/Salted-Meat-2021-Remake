@@ -1,0 +1,65 @@
+<Defs>
+
+
+    <ItemProcessor.CombinationDef>
+		<defName>SM_MeatIntoSaltedMeat</defName>
+		<building>SM_MeatRack</building>
+		<isCategoryRecipe>true</isCategoryRecipe>
+		<items>
+			<li>MeatRaw</li>
+        </items>	
+		<disallowedThingDefs>
+			<li>SM_SaltedMeat</li>
+			<li>SM_SaltedHumanMeat</li>
+			<li>Meat_Human</li>
+			<li>Meat_Megaspider</li>
+		</disallowedThingDefs>
+		<amount>
+			<li>75</li>
+		</amount>
+		<result>SM_SaltedMeat</result>	
+		<yield>75</yield>
+		<useQualityIncreasing>false</useQualityIncreasing>
+        <singleTimeIfNotQualityIncreasing>10</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef>
+
+	<!-- <ItemProcessor.CombinationDef>
+		<defName>SM_HumanMeatIntoSaltedHumanMeat</defName>
+		<building>SM_MeatRack</building>
+		<isCategoryRecipe>false</isCategoryRecipe>
+		<items>
+			<li>Meat_Human</li>
+        </items>
+		<amount>
+			<li>75</li>
+		</amount>
+		<result>SM_SaltedHumanMeat</result>	
+		<yield>75</yield>
+		<useQualityIncreasing>false</useQualityIncreasing>
+        <singleTimeIfNotQualityIncreasing>12</singleTimeIfNotQualityIncreasing>
+	</ItemProcessor.CombinationDef> -->
+
+	<ItemProcessor.CombinationDef>
+		<defName>SM_RawSausageIntoSausage</defName>
+		<building>SM_SausagePost</building>
+		<isCategoryRecipe>false</isCategoryRecipe>
+		<items>
+			<li>SM_Sausage_Raw</li>
+        </items>
+		<amount>
+			<li>30</li>
+		</amount>
+		<result>SM_Sausage</result>	
+		<yield>30</yield>
+        <useQualityIncreasing>true</useQualityIncreasing>
+		<awfulQualityAgeDaysThreshold>5</awfulQualityAgeDaysThreshold>
+		<poorQualityAgeDaysThreshold>8</poorQualityAgeDaysThreshold>
+		<normalQualityAgeDaysThreshold>12</normalQualityAgeDaysThreshold>
+		<goodQualityAgeDaysThreshold>18</goodQualityAgeDaysThreshold>
+		<excellentQualityAgeDaysThreshold>28</excellentQualityAgeDaysThreshold>
+		<masterworkQualityAgeDaysThreshold>35</masterworkQualityAgeDaysThreshold>
+		<legendaryQualityAgeDaysThreshold>40</legendaryQualityAgeDaysThreshold>
+	</ItemProcessor.CombinationDef>
+
+
+</Defs>

@@ -1,0 +1,198 @@
+<Defs>
+
+    <ThingDef ParentName="BuildingBase">
+		<defName>SM_MeatRack</defName>
+		<label>meat rack</label>
+		<description>A wooden rack where meat are hung and salted until their humidity levels are extremely low, once this process is finished, the salted meat is ready to be used in cooking or stored for long periods of time.</description>
+		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Buildings/SM_MeatRack/SM_MeatRack_Empty</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<costList>
+			<WoodLog>20</WoodLog>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<uiIconScale>0.8</uiIconScale>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>10</Mass>
+			<WorkToBuild>450</WorkToBuild>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<building>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<size>(1,1)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+        <!-- Add research prerequisites -->
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.0</fuelConsumptionRate>
+				<fuelCapacity>5.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>SM_Salt</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<!-- <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed> -->
+			</li>
+            <li Class="ItemProcessor.CompProperties_ItemProcessor">
+				<buildingOnGraphic>Things/Buildings/SM_MeatRack/SM_MeatRack_Full</buildingOnGraphic>
+				<buildingFinishedGraphic>Things/Buildings/SM_MeatRack/SM_MeatRack_Full</buildingFinishedGraphic>
+				<numberOfInputs>1</numberOfInputs>
+				<qualitySelector>false</qualitySelector>
+				<isCategoryBuilding>true</isCategoryBuilding>
+				<acceptsNoneAsInput>false</acceptsNoneAsInput>
+				<InsertFirstItemDesc>SM_InsertMeatDesc</InsertFirstItemDesc>
+
+				<isSemiAutomaticMachine>true</isSemiAutomaticMachine>
+				<resetSemiautomaticIcon>UI/SM_ResetMeat</resetSemiautomaticIcon>
+				<chooseIngredientsIcon>UI/SM_MeatEmpty</chooseIngredientsIcon>
+
+				<bringIngredientsText>SM_StartInsertionMeat</bringIngredientsText>
+				<bringIngredientsDesc>SM_StartInsertionMeatDesc</bringIngredientsDesc>
+				<bringIngredientsIcon>UI/SM_InsertMeat</bringIngredientsIcon >
+
+				<cancelIngredientsText>SM_CancelBringingMeat</cancelIngredientsText> 
+				<cancelIngredientsDesc>SM_CancelBringingMeatDesc</cancelIngredientsDesc>
+				<cancelIngredientsIcon>UI/SM_CancelMeat</cancelIngredientsIcon> 
+
+				<noPowerDestroysProgress>false</noPowerDestroysProgress>
+
+				<destroyIngredientsAtStartOfProcess>true</destroyIngredientsAtStartOfProcess>
+
+			</li>
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites>
+			<li>SM_SaltingTechniques</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Sausage Post -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>SM_SausagePost</defName>
+		<label>sausage post</label>
+		<description>A wooden post used to hang sausages and let them age. Sausages need to stay at a relatively cool temperature in order to properly dry and achieve their undistinguishable flavour.</description>
+		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Buildings/SM_SausagePost/SM_SausagePost_Empty</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<costList>
+			<WoodLog>12</WoodLog>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<uiIconScale>0.8</uiIconScale>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>10</Mass>
+			<WorkToBuild>300</WorkToBuild>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<building>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<size>(1,1)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+        <!-- Add research prerequisites -->
+		<comps>
+            <li Class="ItemProcessor.CompProperties_ItemProcessor">
+				<buildingOnGraphic>Things/Buildings/SM_SausagePost/SM_SausagePost_Full</buildingOnGraphic>
+				<buildingFinishedGraphic>Things/Buildings/SM_SausagePost/SM_SausagePost_Full</buildingFinishedGraphic>
+				<numberOfInputs>1</numberOfInputs>
+				<qualitySelector>true</qualitySelector>
+				<isCategoryBuilding>false</isCategoryBuilding>
+				<acceptsNoneAsInput>false</acceptsNoneAsInput>
+				<InsertFirstItemDesc>SM_InsertSausageDesc</InsertFirstItemDesc>
+
+				<isSemiAutomaticMachine>true</isSemiAutomaticMachine>
+				<resetSemiautomaticIcon>UI/SM_ResetSausage</resetSemiautomaticIcon>
+				<chooseIngredientsIcon>Things/Items/SM_RawSausage/SM_RawSausage_c</chooseIngredientsIcon>
+
+				<bringIngredientsText>SM_StartInsertionSausage</bringIngredientsText>
+				<bringIngredientsDesc>SM_StartInsertionSausageDesc</bringIngredientsDesc>
+				<bringIngredientsIcon>UI/SM_InsertSausage</bringIngredientsIcon >
+
+				<cancelIngredientsText>SM_CancelBringingSausage</cancelIngredientsText> 
+				<cancelIngredientsDesc>SM_CancelBringingSausageDesc</cancelIngredientsDesc>
+				<cancelIngredientsIcon>UI/SM_CancelSausage</cancelIngredientsIcon> 
+
+				<noPowerDestroysProgress>false</noPowerDestroysProgress>
+
+				<isTemperatureDependingMachine>true</isTemperatureDependingMachine>
+				<minTemp>-1</minTemp>
+				<maxTemp>23</maxTemp>
+
+				<removeProductText>SM_RemoveSausage</removeProductText>
+				<removeProductDesc>SM_RemoveSausageDesc</removeProductDesc>
+				<removeProductIcon>UI/SM_RemoveSausage</removeProductIcon>
+
+				<destroyIngredientsAtStartOfProcess>true</destroyIngredientsAtStartOfProcess>
+
+			</li>
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites>
+			<li>SM_SaltingTechniques</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,54 @@
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medieval Overhaul</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- Add MO salt to the possible fueling items -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef [defName = "SM_MeatRack"]/comps/li [@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+                    <value>
+                        <li>DankPyon_Salt</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Vanilla Fishing Expanded</li>
+                    </mods>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef [defName = "SM_FishDrier"]/comps/li [@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+                        <value>
+                            <li>DankPyon_Salt</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- Change salt required in sausages -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef [defName = "SM_MakeSausage"]/ingredients/li/filter/thingDefs</xpath>
+                    <value>
+                        <li>DankPyon_Salt</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef [defName = "SM_MakeSausage"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>DankPyon_Salt</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef [defName = "SM_MakeSausage"]/defaultIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>DankPyon_Salt</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

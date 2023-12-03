@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>SM_IngestedSausage</defName>
+        <durationDays>1</durationDays>
+        <stages>
+            <!-- Awful sausage -->
+            <li>
+                <label>ate awful sausage</label>
+                <description>I ate a mixture of raw meat with salt grains that could barely be called a sausage. Completely disgusting.</description>
+                <baseMoodEffect>-12</baseMoodEffect>
+            </li>
+
+            <!-- Poor sausage -->
+            <li>
+                <label>ate poor sausage</label>
+                <description>That sausage was a little humid to be completely mature, I could still feel the flavour of raw meat.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+
+            <!-- Normal sausage -->
+            <li>
+                <label>ate normal sausage</label>
+                <visible>false</visible>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+
+            <!-- Good sausage -->
+            <li>
+                <label>ate good sausage</label>
+                <description>I ate a nice and tasty sausage.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+
+            <!-- Excellent sausage -->
+            <li>
+                <label>ate excellent sausage</label>
+                <description>That sausage was delicious. It's easy to notice it has been well aged.</description>
+                <baseMoodEffect>7</baseMoodEffect>
+            </li>
+
+            <!-- Masterwork sausage -->
+            <li>
+                <label>ate masterwork sausage</label>
+                <description>I experienced a flavour only thought to be felt by the most refined palates!</description>
+                <baseMoodEffect>12</baseMoodEffect>
+            </li>
+
+            <!-- Legendary sausage -->
+            <li>
+                <label>ate legendary sausage</label>
+                <description>To be able to taste a food this delicious is something not ordinary! I'm completely pleased!</description>
+                <baseMoodEffect>20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

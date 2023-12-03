@@ -1,0 +1,75 @@
+<Defs>
+
+<RecipeDef>
+    <defName>SM_MakeSausage</defName>
+    <label>make sausages</label>
+    <description>Tuck grounded meat mixed with salt into a small leather bag or animal gut to make a sausage.\n\nSausages need to be aged at a certain temperature before they can be consumed.</description>
+    <jobString>Making sausages.</jobString>
+    <workAmount>500</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <recipeUsers>
+      <li>TableButcher</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SM_Salt</li>
+            <li MayRequire="VanillaExpanded.VCookE">VCE_Salt</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <products>
+      <SM_Sausage_Raw>30</SM_Sausage_Raw>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+        <li>Leathers</li>
+      </categories>
+      <thingDefs>
+        <li>SM_Salt</li>
+        <li MayRequire="VanillaExpanded.VCookE">VCE_Salt</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+        <li>Leathers</li>
+      </categories>
+      <thingDefs>
+        <li>SM_Salt</li>
+        <li MayRequire="VanillaExpanded.VCookE">VCE_Salt</li>
+      </thingDefs>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>SM_SaltedMeat</li>
+        <li>Meat_Megaspider</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+    <researchPrerequisite>SM_SaltingTechniques</researchPrerequisite>
+  </RecipeDef>
+
+</Defs>

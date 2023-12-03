@@ -1,0 +1,38 @@
+<Defs>
+
+
+    <RecipeDef>
+        <defName>SM_ExtractSaltFromChunk</defName>
+        <label>Extract salt from rock chunks</label>
+        <description>Crush stone chunks to filter the amounts of salt contained. It takes time, but profits very well.</description>
+        <workAmount>2200</workAmount>
+        <jobString>Extracting salt from rock chunks.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>CutStone</effectWorking>
+        <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+        <recipeUsers>
+            <li>TableStonecutter</li>
+          </recipeUsers>
+        <ingredients>
+          <li>
+            <filter>
+              <categories>
+                <li>StoneChunks</li>
+              </categories>
+            </filter>
+            <count>1</count>
+          </li>
+        </ingredients>
+        <fixedIngredientFilter>
+          <categories>
+            <li>StoneChunks</li>
+          </categories>
+        </fixedIngredientFilter>
+        <products>
+            <SM_Salt>35</SM_Salt>
+        </products>
+        <researchPrerequisite>SM_SaltingTechniques</researchPrerequisite>
+      </RecipeDef>
+
+
+</Defs>
