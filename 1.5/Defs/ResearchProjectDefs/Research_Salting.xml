@@ -1,0 +1,17 @@
+<Defs>
+
+
+    <ResearchProjectDef>
+        <defName>SM_SaltingTechniques</defName>
+        <label>salt preservation</label>
+        <description>Learn to properly preserve meat with salt and to make delicious sausages.</description>
+        <baseCost>400</baseCost>
+        <techLevel>Neolithic</techLevel>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>4.90</researchViewY>
+
+
+      </ResearchProjectDef>
+
+
+</Defs>

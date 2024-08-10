@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>SM_MeatRackFirstItem</defName>
+		<building>SM_MeatRack</building>
+		<slot>1</slot>
+		<items>			
+			<li>MeatRaw</li>			
+		</items>							
+	</ItemProcessor.ItemAcceptedDef>
+
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>SM_SausagePostFirstItem</defName>
+		<building>SM_SausagePost</building>
+		<slot>1</slot>
+		<items>			
+			<li>SM_Sausage_Raw</li>						
+		</items>							
+	</ItemProcessor.ItemAcceptedDef>
+
+	
+	
+</Defs>

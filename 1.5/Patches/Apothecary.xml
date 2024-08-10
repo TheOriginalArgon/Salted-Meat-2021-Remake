@@ -1,0 +1,34 @@
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Apothecary (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- Add VCE salt to the possible fueling items -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef [defName = "SM_MeatRack"]/comps/li [@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+                    <value>
+                        <li>AYSalt</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Vanilla Fishing Expanded</li>
+                    </mods>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef [defName = "SM_FishDrier"]/comps/li [@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+                        <value>
+                            <li>AYSalt</li>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
