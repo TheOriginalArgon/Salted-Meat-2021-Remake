@@ -18,7 +18,7 @@
             <FoodPoisonChanceFixedHuman>0.005</FoodPoisonChanceFixedHuman>
         </statBases>
         <thingCategories>
-            <li>FoodMeals</li>
+            <li>Foods</li>
         </thingCategories>
         <comps>
             <li Class="CompProperties_Rottable">
@@ -52,10 +52,12 @@
             <Flammability>0.2</Flammability>
             <Nutrition>0.05</Nutrition>
             <FoodPoisonChanceFixedHuman>0.005</FoodPoisonChanceFixedHuman>
+            <DeteriorationRate>2</DeteriorationRate>
         </statBases>
         <thingCategories>
             <li>FoodMeals</li>
         </thingCategories>
+        <stackLimit>75</stackLimit>
         <comps>
             <li Class="CompProperties_Rottable">
                 <daysToRotStart>52</daysToRotStart>
@@ -63,7 +65,7 @@
             </li>
             <li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
                 <ingestedThought>SM_IngestedSausage</ingestedThought>
-              </li>
+            </li>
             <li>
                 <compClass>CompQuality</compClass>
             </li>
@@ -73,6 +75,7 @@
             <preferability>MealFine</preferability>
             <ingestEffect>EatMeat</ingestEffect>
             <ingestSound>RawMeat_Eat</ingestSound>
+            <optimalityOffsetHumanlikes>25</optimalityOffsetHumanlikes>
         </ingestible>
     </ThingDef>
 
