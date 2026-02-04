@@ -1,0 +1,27 @@
+<Defs>
+
+
+  <ResearchProjectDef>
+    <defName>SM_SaltingTechniques</defName>
+    <label>food preservation techniques</label>
+    <description>Learn to preserve and cure meat and vegetables to prevent them from rotting.</description>
+    <baseCost>950</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>5.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SM_SausageMaking</defName>
+    <label>sausage making</label>
+    <description>Learn to make sausages, a special type of meat preservation form which can give health benefits.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>5.10</researchViewY>
+    <prerequisites>
+      <li>SM_SaltingTechniques</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+</Defs>

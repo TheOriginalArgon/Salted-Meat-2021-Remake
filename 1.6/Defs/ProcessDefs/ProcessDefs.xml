@@ -1,0 +1,97 @@
+<Defs>
+
+    <PipeSystem.ProcessDef>
+        <defName>SM_MeatToSaltedMeat</defName>
+        <label>Curate meat with salt</label>
+        <description>Turns 75 meat into 75 salted meat.</description>
+        <labelOverride>Curate 75 meat into 75 salted meat</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thingCategory>MeatRaw</thingCategory>
+                <countNeeded>75</countNeeded>
+                <disallowedThingDefs>
+                    <li MayRequire="OskarPotocki.VFE.Classical">VFEC_Jerky</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+                    <li>Meat_Megaspider</li>
+                    <li>Meat_Human</li>
+                    <li>SM_SaltedMeat</li>
+                </disallowedThingDefs>
+            </li>
+        </ingredients>
+        <ticks>750000</ticks>
+        <results>
+            <li>
+                <thing>SM_SaltedMeat</thing>
+                <count>75</count>
+            </li>
+        </results>
+        <temperatureRuinable>true</temperatureRuinable>
+        <minSafeTemperature>6</minSafeTemperature>
+        <maxSafeTemperature>20</maxSafeTemperature>
+        <rareTicksToDestroy>18</rareTicksToDestroy>
+        <isRainDependingProcess>true</isRainDependingProcess>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SM_RawPickledVegetablesToPickledVegetables</defName>
+        <label>Pickle vegetables</label>
+        <description>Turns 30 raw pickled vegetables into 30 pickled vegetables.</description>
+        <labelOverride>Pickle 30 raw pickled vegetables into 30 pickled vegetables</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>SM_RawPickledVegetables</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>360000</ticks>
+        <results>
+            <li>
+                <thing>SM_PickledVegetables</thing>
+                <count>30</count>
+            </li>
+        </results>
+        <useIngredients>true</useIngredients>
+        <transfersIngredientList>true</transfersIngredientList>
+        <temperatureRuinable>false</temperatureRuinable>
+    </PipeSystem.ProcessDef>
+
+    <PipeSystem.ProcessDef>
+        <defName>SM_RawSausagesToSausages</defName>
+        <label>Mature sausages</label>
+        <description>Turns 30 raw sausages into 30 matured sausages.</description>
+        <labelOverride>Turn 30 raw sausages into 30 matured sausages</labelOverride>
+        <priorityInBillList>0</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>SM_RawSausages</thing>
+                <countNeeded>30</countNeeded>
+            </li>
+        </ingredients>
+        <ticksQuality>
+            <li>720000</li>
+            <li>900000</li>
+            <li>1200000</li>
+            <li>1800000</li>
+            <li>2400000</li>
+            <li>3000000</li>
+            <li>3600000</li>
+        </ticksQuality>
+        <results>
+            <li>
+                <thing>SM_Sausages</thing>
+                <count>30</count>
+            </li>
+        </results>
+        <stopAtQuality>true</stopAtQuality>
+        <allowExtractAtCurrentQuality>true</allowExtractAtCurrentQuality>
+        <autoExtract>false</autoExtract>
+        <temperatureRuinable>true</temperatureRuinable>
+        <minSafeTemperature>6</minSafeTemperature>
+        <maxSafeTemperature>15</maxSafeTemperature>
+        <rareTicksToDestroy>18</rareTicksToDestroy>
+        <isRainDependingProcess>true</isRainDependingProcess>
+    </PipeSystem.ProcessDef>
+
+</Defs>

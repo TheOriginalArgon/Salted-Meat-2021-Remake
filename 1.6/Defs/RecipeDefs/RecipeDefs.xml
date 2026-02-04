@@ -1,0 +1,124 @@
+<Defs>
+
+  <RecipeDef>
+    <defName>SM_MakeSausage</defName>
+    <label>make sausages</label>
+    <description>Elaborate raw sausages with meat tucked inside a thin leather gut. Sausages need to then mature on time at a proper temperature before they rot.</description>
+    <jobString>Making sausages.</jobString>
+    <workAmount>750</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <recipeUsers>
+      <li>TableButcher</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <SM_RawSausages>30</SM_RawSausages>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+        <li>Leathers</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+        <li>Leathers</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>SM_SaltedMeat</li>
+        <li>Meat_Megaspider</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+    <researchPrerequisite>SM_SausageMaking</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>SM_MakePickledVegetables</defName>
+    <label>make pickled vegetables</label>
+    <description>Assort a mixture of different vegetables preserved in brine. Pickles are a safe and quick way to avoid vegetables from rotting. Pickles can also age and become less nutritious but with enhancing health effects.</description>
+    <jobString>Making pickled vegetables.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <recipeUsers>
+      <li>TableButcher</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <products>
+      <SM_RawPickledVegetables>30</SM_RawPickledVegetables>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>PlantFoodRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>SM_RawPickledVegetables</li>
+        <li>SM_PickledVegetables</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+    <researchPrerequisite>SM_SaltingTechniques</researchPrerequisite>
+    <modExtensions>
+      <li Class="VEF.Cooking.Recipe_Extension">
+        <individualIngredients>true</individualIngredients>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+</Defs>

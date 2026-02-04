@@ -56,6 +56,7 @@
 				<fuelFilter>
 					<thingDefs>
 						<li>SM_Salt</li>
+						<li MayRequire="VanillaExpanded.VCookE">VCE_Salt</li>
 					</thingDefs>
 				</fuelFilter>
 				<initialFuelPercent>1</initialFuelPercent>

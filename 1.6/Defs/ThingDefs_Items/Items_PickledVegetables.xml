@@ -1,0 +1,75 @@
+<Defs>
+
+    <!-- Raw Pickled Vegetables -->
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>SM_RawPickledVegetables</defName>
+        <label>raw assorted vegetables</label>
+        <description>An assortment of vegetables ready to be pickled. Not very nutritiously effective in their current form.</description>
+        <graphicData>
+            <texPath>Things/Items/SM_RawPickledVegetables</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <statBases>
+            <MarketValue>1</MarketValue>
+            <Mass>0.05</Mass>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <Nutrition>0.05</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.005</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <thingCategories>
+            <li>PlantFoodRaw</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Ingredients">
+                <splitTransferableFoodKind>true</splitTransferableFoodKind>
+            </li>
+        </comps>
+        <ingestible>
+            <foodType>VegetableOrFruit</foodType>
+            <preferability>MealSimple</preferability>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>RawVegetable_Eat</ingestSound>
+            <canAutoSelectAsFoodForCaravan>true</canAutoSelectAsFoodForCaravan>
+        </ingestible>
+    </ThingDef>
+
+    <!-- Pickled Vegetables -->
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>SM_PickledVegetables</defName>
+        <label>pickled vegetables</label>
+        <description>Pickled vegetables preserved in brine for an extended period, developing a rich flavor. Highly nutritious and tasty.</description>
+        <graphicData>
+            <texPath>Things/Items/SM_PickledVegetables</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <statBases>
+            <MarketValue>2.5</MarketValue>
+            <Mass>0.05</Mass>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <Nutrition>0.25</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.005</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <thingCategories>
+            <li>PlantFoodRaw</li>
+        </thingCategories>
+        <stackLimit>75</stackLimit>
+        <comps>
+            <li Class="CompProperties_Ingredients">
+                <splitTransferableFoodKind>true</splitTransferableFoodKind>
+            </li>
+        </comps>
+        <ingestible>
+            <foodType>Meal</foodType>
+            <preferability>MealFine</preferability>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>RawVegetable_Eat</ingestSound>
+            <optimalityOffsetHumanlikes>35</optimalityOffsetHumanlikes>
+            <canAutoSelectAsFoodForCaravan>true</canAutoSelectAsFoodForCaravan>
+        </ingestible>
+    </ThingDef>
+
+</Defs>

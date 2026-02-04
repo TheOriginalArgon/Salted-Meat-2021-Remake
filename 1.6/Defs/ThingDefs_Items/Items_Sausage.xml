@@ -1,0 +1,95 @@
+<Defs>
+
+    <!-- Raw Sausages -->
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>SM_RawSausages</defName>
+        <label>raw sausages</label>
+        <description>Raw sausages that have not yet matured.</description>
+        <graphicData>
+            <texPath>Things/Items/SM_RawSausages</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <statBases>
+            <MarketValue>0.5</MarketValue>
+            <Mass>0.05</Mass>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <Nutrition>0.05</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <thingCategories>
+            <li>Foods</li>
+        </thingCategories>
+        <comps>
+            <li Class="ArgonicCore.Comps.CompProperties_RuinOverTime">
+                <daysToRotStart>15</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <ingestible>
+            <foodType>Meat</foodType>
+            <preferability>DesperateOnly</preferability>
+            <tasteThought>AteRawFood</tasteThought>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>RawMeat_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
+    <!-- Sausage -->
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>SM_Sausages</defName>
+        <label>sausages</label>
+        <description>Meat spiced up and salted tucked inside of tube-shaped elements usually made from thin leather or a whole animal gut. Sausages acquire an unique flavour once they dry and age enough.</description>
+        <graphicData>
+            <texPath>Things/Items/SM_Sausages</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <statBases>
+            <MarketValue>3.2</MarketValue>
+            <Mass>0.05</Mass>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <Nutrition>0.07</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.005</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <thingCategories>
+            <li>FoodMeals</li>
+        </thingCategories>
+        <stackLimit>75</stackLimit>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="VEF.Cooking.CompProperties_StackByQuality"/>
+            <li Class="VEF.Cooking.CompProperties_IngestedThoughtFromQuality">
+				<ingestedThought>SM_AteSausage</ingestedThought>
+			</li>
+        </comps>
+        <ingestible>
+            <foodType>Meal</foodType>
+            <preferability>MealFine</preferability>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+            <optimalityOffsetHumanlikes>25</optimalityOffsetHumanlikes>
+            <canAutoSelectAsFoodForCaravan>true</canAutoSelectAsFoodForCaravan>
+            <outcomeDoers>
+                <li Class="ArgonicCore.IngestionOutcomes.IngestionOutcomeDoer_HediffsPerQuality">
+                    <hediffDefs>
+                        <li>SM_ConsumedSausage_Awful</li>
+                        <li>SM_ConsumedSausage_Poor</li>
+                        <li>SM_ConsumedSausage_Normal</li>
+                        <li>SM_ConsumedSausage_Good</li>
+                        <li>SM_ConsumedSausage_Excellent</li>
+                        <li>SM_ConsumedSausage_Masterwork</li>
+                        <li>SM_ConsumedSausage_Legendary</li>
+                    </hediffDefs>
+                    <severity>1</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+
+</Defs>

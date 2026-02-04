@@ -1,0 +1,162 @@
+<Defs>
+
+    <HediffDef Name="SM_ConsumedSausageBase" Abstract="True">
+        <makesSickThought>false</makesSickThought>
+        <description>Sausages are rich and tasty. Higher quality of sausages provide increased benefits.</description>
+        <tendable>false</tendable>
+        <isBad>false</isBad>
+        <defaultLabelColor>(92,62,198)</defaultLabelColor>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>1.0</initialSeverity>
+        <maxSeverity>1.0</maxSeverity>
+        <comps>
+            <li Class="VEF.Cooking.HediffCompProperties_WhileHavingThoughts">
+                <thoughtDefs>
+                    <li>SM_AteSausage</li>
+                </thoughtDefs>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SM_ConsumedSausageBase">
+        <defName>SM_ConsumedSausage_Awful</defName>
+        <label>consumed awful sausage</label>
+        <description>Sausages are rich and tasty. Higher quality of sausages provide increased benefits.\n\nThis particular sausage was nasty and caused more harm than good.</description>
+        <stages>
+            <li>
+                <vomitMtbDays>0.5</vomitMtbDays>
+                <painOffset>0.08</painOffset>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>0.9</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SM_ConsumedSausageBase">
+        <defName>SM_ConsumedSausage_Poor</defName>
+        <label>consumed poor sausage</label>
+        <description>Sausages are rich and tasty. Higher quality of sausages provide increased benefits.\n\nThis particular sausage was bad and lacked a lot of maturing time. It upsets the stomach.</description>
+        <stages>
+            <li>
+                <vomitMtbDays>0.7</vomitMtbDays>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>0.95</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SM_ConsumedSausageBase">
+        <defName>SM_ConsumedSausage_Normal</defName>
+        <label>consumed sausage</label>
+        <description>Sausages are rich and tasty. Higher quality of sausages provide increased benefits.\n\nThis particular sausage was nice.</description>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.02</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SM_ConsumedSausageBase">
+        <defName>SM_ConsumedSausage_Good</defName>
+        <label>consumed good sausage</label>
+        <description>Sausages are rich and tasty. Higher quality of sausages provide increased benefits.\n\nThis particular sausage was pleasant to eat and healthy.</description>
+        <stages>
+            <li>
+                <painFactor>0.9</painFactor>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.05</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>0.02</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SM_ConsumedSausageBase">
+        <defName>SM_ConsumedSausage_Excellent</defName>
+        <label>consumed excellent sausage</label>
+        <description>Sausages are rich and tasty. Higher quality of sausages provide increased benefits.\n\nThis particular sausage had an amazing, aged taste and rewarded the body.</description>
+        <stages>
+            <li>
+                <painFactor>0.9</painFactor>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.06</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>0.03</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SM_ConsumedSausageBase">
+        <defName>SM_ConsumedSausage_Masterwork</defName>
+        <label>consumed masterwork sausage</label>
+        <description>Sausages are rich and tasty. Higher quality of sausages provide increased benefits.\n\nThis particular sausage was a culinary work of art, and both body and mind benefitted from eating it.</description>
+        <stages>
+            <li>
+                <painFactor>0.88</painFactor>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.06</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>0.05</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <GlobalLearningFactor>1.1</GlobalLearningFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SM_ConsumedSausageBase">
+        <defName>SM_ConsumedSausage_Legendary</defName>
+        <label>consumed legendary sausage</label>
+        <description>Sausages are rich and tasty. Higher quality of sausages provide increased benefits.\n\nThis particular sausage belonged in the olympus, and its consumption caused an ecstastic state of the soul.</description>
+        <stages>
+            <li>
+                <painFactor>0.8</painFactor>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.07</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>0.06</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <GlobalLearningFactor>1.35</GlobalLearningFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

@@ -1,0 +1,35 @@
+<Defs>
+
+    <!-- TODO: Make the LoadFolders load this content for fish when either VanillaFishingExpanded or Odyssey is enabled, then make the patches in
+     Patch_Odyssey accommodate the fish category depending on whether Odyssey is active or not. Odyssey takes precedence over VanillaFishingExpanded
+          for the fish category, so if Odyssey is active, it will use the fish category from Odyssey, otherwise it will use the one from VanillaFishingExpanded. -->
+    <ThingDef ParentName="OrganicProductBase">
+        <defName>SM_DriedFish</defName>
+        <label>dried fish</label>
+        <description>Fish preserved through a process of drying. It prevents it from rotting, and is not pleasant to eat raw. However, it is very nutritious and good for meals.</description>
+        <graphicData>
+            <texPath>Things/Items/SM_DriedFish</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <thingCategories>
+            <li>MeatRaw</li>
+        </thingCategories>
+        <statBases>
+            <MarketValue>2.2</MarketValue>
+            <Mass>0.05</Mass>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Flammability>0.5</Flammability>
+            <Nutrition>0.25</Nutrition>
+            <FoodPoisonChanceFixedHuman>0.001</FoodPoisonChanceFixedHuman>
+        </statBases>
+        <ingestible>
+            <foodType>Meat</foodType>
+            <preferability>DesperateOnly</preferability>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>Meat_Eat</ingestSound>
+            <tasteThought>AteRawFood</tasteThought>
+        </ingestible>
+    </ThingDef>
+
+</Defs>

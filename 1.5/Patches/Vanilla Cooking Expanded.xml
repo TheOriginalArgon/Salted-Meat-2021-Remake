@@ -9,7 +9,7 @@
             <operations>
 
                 <!-- Add VCE salt to the possible fueling items -->
-                <li Class="PatchOperationAdd">
+                <!-- <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef [defName = "SM_MeatRack"]/comps/li [@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
                     <value>
                         <li>VCE_Salt</li>
@@ -26,7 +26,7 @@
                             <li>VCE_Salt</li>
                         </value>
                     </match>
-                </li>
+                </li> -->
 
                 <!-- Change output to unify salt -->
                 <li Class="PatchOperationSetName">

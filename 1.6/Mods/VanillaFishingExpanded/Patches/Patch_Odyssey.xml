@@ -1,0 +1,93 @@
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Odyssey</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <PipeSystem.ProcessDef>
+                            <defName>SM_FishToDriedFish</defName>
+                            <label>Dry fish</label>
+                            <description>Turns 30 fish into 30 dried fish.</description>
+                            <labelOverride>Dry 30 fish into 30 dried fish</labelOverride>
+                            <priorityInBillList>0</priorityInBillList>
+                            <ingredients>
+                                <li>
+                                    <thingCategory>Fish</thingCategory>
+                                    <countNeeded>30</countNeeded>
+                                    <disallowedThingDefs>
+                                        <li>SM_DriedFish</li>
+                                    </disallowedThingDefs>
+                                </li>
+                            </ingredients>
+                            <ticks>700000</ticks>
+                            <results>
+                                <li>
+                                    <thing>SM_DriedFish</thing>
+                                    <count>30</count>
+                                </li>
+                            </results>
+                            <temperatureRuinable>true</temperatureRuinable>
+                            <minSafeTemperature>14</minSafeTemperature>
+                            <maxSafeTemperature>999</maxSafeTemperature>
+                            <rareTicksToDestroy>22</rareTicksToDestroy>
+                            <isRainDependingProcess>true</isRainDependingProcess>
+                        </PipeSystem.ProcessDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="SM_DriedFish"]/thingCategories/li[text()="MeatRaw"]</xpath>
+                    <value>
+                        <li>Fish</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <PipeSystem.ProcessDef>
+                            <defName>SM_FishToDriedFish</defName>
+                            <label>Dry fish</label>
+                            <description>Turns 30 fish into 30 dried fish.</description>
+                            <labelOverride>Dry 30 fish into 30 dried fish</labelOverride>
+                            <priorityInBillList>0</priorityInBillList>
+                            <ingredients>
+                                <li>
+                                    <thingCategory>VCEF_RawFishCategory</thingCategory>
+                                    <countNeeded>30</countNeeded>
+                                    <disallowedThingDefs>
+                                        <li>SM_DriedFish</li>
+                                    </disallowedThingDefs>
+                                </li>
+                            </ingredients>
+                            <ticks>700000</ticks>
+                            <results>
+                                <li>
+                                    <thing>SM_DriedFish</thing>
+                                    <count>30</count>
+                                </li>
+                            </results>
+                            <temperatureRuinable>true</temperatureRuinable>
+                            <minSafeTemperature>12</minSafeTemperature>
+                            <maxSafeTemperature>999</maxSafeTemperature>
+                            <rareTicksToDestroy>22</rareTicksToDestroy>
+                            <isRainDependingProcess>true</isRainDependingProcess>
+                        </PipeSystem.ProcessDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="SM_DriedFish"]/thingCategories/li[text()="MeatRaw"]</xpath>
+                    <value>
+                        <li>VCEF_RawFishCategory</li>
+                    </value>
+                </li>
+            </operations>
+        </nomatch>
+    </Operation>
+</Patch>
